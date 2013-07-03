@@ -1,3 +1,4 @@
+
 var selectedValue = [];
 // function to check the limit on the number of checkboxes selected.if user selects more than three an alert message is displayed
 function limitCheck(val) {
