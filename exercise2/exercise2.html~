@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>this is my second javscript exercise
+    </title>
+      
+  </head>
+  <body>
+    <p>
+      <input type="checkbox" name="days" id="1" value="sunday" onclick="limitCheck(this);" /><label for="1">sunday</label>
+    </p>
+    <p>
+      <input type="checkbox" name="days" id="2" value="monday"  onclick="limitCheck(this);"><label for="2">monday</label>
+    </p>
+    <p>
+      <input type="checkbox" name="days" id="3" value="wednesday"  onclick="limitCheck(this);"><label for="3">wednesday</label>
+    </p>
+    <p>
+      <input type="checkbox" name="days" id="4" value="thursday"  onclick="limitCheck(this)" ><label for="4">thursday</label>
+    </p>
+    <p>
+      <input type="checkbox" name="days" id="5" value="tuesday"  onclick="limitCheck(this)" ><label for="5">tuesday</label>
+    </p>
+    <p>
+      <input type="checkbox" name="days" id="6" value="friday"  onclick="limitCheck(this)" ><label for="6">friday</label>
+    </p>
+    <p>
+      <input type="checkbox" name="days" id="7" value="saturday"  onclick="limitCheck(this)" ><label for="7">saturday</label>
+    </p>
+    <p>
+      <input type="checkbox" id="none" value="none"  onclick="selectNone()"><label for="none">none</label>
+    </p>
+    
+    <script type="text/javascript" src="checkmax3.js"></script>
+    
+  </body>
+</html>
