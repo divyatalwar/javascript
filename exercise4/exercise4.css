@@ -1,12 +1,11 @@
-ul  {
-list-style-type:none;
+ul {
+  list-style-type:none;
 }
-#outer
-{
-height:100px;
-overflow-y:scroll;
+#outer {
+  height:100px;
+  overflow-y:scroll;
 }
 ul ul {
-display:none;
+  display:none;
 }
 
