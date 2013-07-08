@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>this is my javascript exercise</title>    
+    <link rel="stylesheet" type="text/css" href="exercise5.css">       
+  </head>
+  <body>  
+    <div id="container">
+      <div id="header">
+        Registration Form
+      </div>   
+      <form id = "registrationform" action="" method=get>
+        <div class="inputs">
+          <span class="label"><label for ="login">Login Id</label></span>
+          <input type="text" id="login">
+        </div>
+        <div class="inputs">
+          <span class="label"><label for ="email">Email</label></span>
+          <input type="text" id="email">
+        </div>  
+        <div class="inputs">
+          <span class="label"><label for ="name">Name</label></span>
+          <input type="text" id="name">
+        </div>  
+        <div class="timezone">
+          <span class="label"><label for="timezone">Timezone</span>
+            <select id="gmt">
+              <option value="GMT">GMT</option>
+              <option value="GMT+1">GMT+1</option>
+              <option value="GMT+2">GMT+2</option>
+              <option value="GMT+3">GMT+3</option>
+              <option value="GMT+4">GMT+4</option>
+            </select>
+        </div>
+        <div class="inputs">
+          <span class="label"><label for ="homepage">Homepage</label></span>
+          <input type="text" id="homepage">
+        </div> 
+        <div class="inputs">
+          <span class="label"> About Me</span>
+        </div>   
+        <textarea id="text_area" rows="8" cols="27"></textarea><br>
+        <input type="checkbox" onclick = "confirm1(this)" id="check">Receive notification of comments<br>
+        <p class = "para">You will be sent an email when someone posts comment to your blog or album</p>
+        <p class="para1">your password will be mailed to you</p>
+        <input type="submit"  id="go" value="GO">
+      </form>
+    </div>
+    <script type="text/javascript" src="exercise5.js">
+    </script>
+  </body>
+</html>
