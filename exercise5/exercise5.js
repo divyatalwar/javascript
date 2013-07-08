@@ -17,7 +17,7 @@ function formvalidation(e)
     count += 1;
   }
   else if (formelement.email.value=="") {
-    alert("please enter correct email");
+    alert("email field cant be left empty");
     count += 1;
   }
   else if (formelement.name.value=="") {
@@ -29,7 +29,7 @@ function formvalidation(e)
     count += 1;
   }
   else if (formelement.text_area.value.length < 50) {
-    alert("information is not complete: should be minimum 50 characters");
+    alert(" ABOUT ME information is not complete: should be minimum 50 characters");
     count += 1;
   }  
   if (check.checked) {
