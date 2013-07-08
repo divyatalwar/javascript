@@ -6,8 +6,8 @@ function usernamevalidation()
   while (bool == true) {
     var firstname = prompt("enter your first name");
     bool = !bool;
-    // checks if there is a space between any of the entered letters or firstname is  blank
-    if (firstname == "" || firstname.match(' ')) {
+    // checks if there are a few white spaces or firstname is  blank
+    if (firstname == "" || (firstname.replace(/\s+/g, '').length==0)) {
       alert("please enter a valid first name");
       bool = !bool;
     }
@@ -16,7 +16,8 @@ function usernamevalidation()
   while (bool == false) {
     bool = !bool;
     var lastname = prompt("enter your last name");
-    if(lastname == "" || lastname.match(' ')) {
+    
+    if(lastname == "" || (lastname.replace(/\s+/g, '').length==0)) {
       alert("please enter a valid last name");
       bool = !bool;
     }
