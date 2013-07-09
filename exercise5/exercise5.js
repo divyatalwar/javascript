@@ -34,7 +34,7 @@ function formvalidation(e)
     if (confirm("Are you sure you " + textstring + " to receive any notificiaction")) {
     } 
     else {
-     e.preventDefault();
+     flag = true;
     }
   }
   //if any of the field is invalid prevent it from submitting. 
