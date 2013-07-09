@@ -12,16 +12,18 @@ function formvalidation(e)
   var flag = false;
   var element = document.getElementsByClassName("inputvalue");
   for (var i=0;i < element.length;i++) {
-    if(element[i].value == "") {
+    var text = element[i].value.trim(' ');        //to remove any leading or trailing white spaces
+    if(text == "") {
       alert(element[i].id + " cant be left empty");
       flag = true;
       break;
     }
   }
   //validate text area field
-  if (formElement.text_area.value.length < 50 & flag == false) {
+  if (formElement.text_area.value.trim(' ').length < 50 & flag == false) {
     alert(" ABOUT ME information is not complete: it should be minimum 50 characters");
     flag = true;
+    
   }  
   //confirm checkbox notification
   if (check.checked) {
