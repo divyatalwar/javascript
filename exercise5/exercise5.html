@@ -8,18 +8,18 @@
       <div id="header">
         Registration Form
       </div>   
-      <form id = "registrationform" action="_blank" method=get>
+      <form id = "registrationform" action="_blank">
         <div class="inputs">
           <span class="label"><label for ="login">Login Id</label></span>
-          <input type="text" id="login">
+          <input type="text" id="login" class="inputvalue">
         </div>
         <div class="inputs">
           <span class="label"><label for ="email">Email</label></span>
-          <input type="text" id="email">
+          <input type="text" id="email" class="inputvalue">
         </div>  
         <div class="inputs">
           <span class="label"><label for ="name">Name</label></span>
-          <input type="text" id="name">
+          <input type="text" id="name" class="inputvalue">
         </div>  
         <div class="timezone">
           <span class="label"><label for="timezone">Timezone</span>
@@ -33,13 +33,13 @@
         </div>
         <div class="inputs">
           <span class="label"><label for ="homepage">Homepage</label></span>
-          <input type="text" id="homepage">
+          <input type="text" id="homepage" class="inputvalue">
         </div> 
         <div class="inputs">
           <span class="label"> About Me</span>
         </div>   
         <textarea id="text_area" rows="8" cols="27"></textarea><br>
-        <input type="checkbox" onclick = "confirm1(this)" id="check">Receive notification of comments<br>
+        <input type="checkbox" id="check">Receive notification of comments<br>
         <p class = "para">You will be sent an email when someone posts comment to your blog or album</p>
         <p class="para1">your password will be mailed to you</p>
         <input type="submit"  id="go" value="GO">
