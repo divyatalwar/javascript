@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> this is my javascript exercise
+</title>
+<link rel="stylesheet" type="text/css" href="exercise8.css">
+<script type="text/javascript" src="exercise8.js">
+</script>
+</head>
+<body>
+<div id="container">
+<div id="leftdropdown">
+<select id="add" multiple="multiple" size="5">
+<option id="denmark">Denmark</option>
+<option id="Djibouti">Djibouti</option>
+<option id="dominica">Dominica</option>
+<option id="dominicanrepublic">dominican republic</option>
+<option id="east_temor">East temor</option>
+</select>
+</div>
+<div id="addbutton">
+<input type="submit" value="ADD &#9654;" class="addbutton"  onclick = "additems('add','remove');"> 
+</div>
+<div id="removebutton">
+<input type="submit" value="&#9664;remove" class="removebutton" onclick = "additems('remove','add')"> 
+</div>
+<div id="rightdropdown">
+<select id="remove" multiple="multiple" size="5">
+
+</select>
+</div>
+</div>
+</body>
+</html>
