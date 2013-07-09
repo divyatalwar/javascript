@@ -1,8 +1,8 @@
-function additems(selectId1,selectId2)
+function additems(fromSelectId, toSelectId)
 {
-  var selectbox1=document.getElementById(selectId1);
-  var selectbox2=document.getElementById(selectId2);
-  while(selectbox1.selectedIndex!=-1) {
-    selectbox2.appendChild(selectbox1.options[selectbox1.selectedIndex]);
+  var fromSelectBox = document.getElementById(fromSelectId);
+  var toSelectBox = document.getElementById(toSelectId);
+  while (fromSelectBox.selectedIndex != -1) {
+    toSelectBox.add(fromSelectBox.options[fromSelectBox.selectedIndex]);
   }
 }
