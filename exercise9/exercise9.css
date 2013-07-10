@@ -1,0 +1,56 @@
+#header
+{
+  background-color:green;
+  color:white;
+  text-align:center;
+}
+.label
+{
+  display:inline-block;
+  color:black;
+  width:150px;
+  margin-left:5px;
+}
+#container
+{
+  width:500px;
+  margin:auto;
+  background-color:#ccffcc;
+}
+.inputs
+{
+  display:inline-block;
+  margin-top:4px;
+  margin-bottom:4px;
+  margin-left:5px;
+}
+.timezone
+{
+  margin-top:4px;
+  margin-bottom:8px;
+  margin-left:5px;
+  display:inline-block;
+}
+#gmt
+{
+  background-color:white;
+  display:inline-block;
+  width:230px;
+}
+#text_area
+{
+  width:490px;
+}
+.para1
+{
+  text-align:center;
+}
+.para
+{
+  text-align:left;
+  font-size:12px;
+}
+#go
+{
+  margin-left:250px;
+}
