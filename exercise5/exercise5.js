@@ -7,13 +7,13 @@ var formElement = {
 //adding event handler for submit button
 register.addEventListener("submit" ,formvalidation);
 
-function formvalidation(e)
-{ // a flag variable to check the validity of the fields
+function formvalidation(e) {
+  // a flag variable to check the validity of the fields
   var flag = false;
   var element = document.getElementsByClassName("inputvalue");
-  for (var i=0;i < element.length;i++) {
+  for (var i = 0; i < element.length; i++) {
     var text = element[i].value.trim(' ');        //to remove any leading or trailing white spaces
-    if(text == "") {
+    if(text === "") {
       alert(element[i].id + " cant be left empty");
       flag = true;
       break;
@@ -32,7 +32,7 @@ function formvalidation(e)
   else {
        textstring = "dont want";
   }
-  if (! flag){
+  if (! flag) {
     if (confirm("Are you sure you " + textstring + " to receive any notificiaction")) {
     } 
     else {
