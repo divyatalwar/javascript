@@ -8,9 +8,9 @@ function addOrEditRow(bool,id)
   //assigning id to each row
   var rowid = "arr" + rowNum + count;
   var row = table.insertRow(rowNum);
-  row.setAttribute("id",rowid);
+  row.setAttribute("id", rowid);
   var name = document.createElement("input");
-  name.setAttribute("type","text");
+  name.setAttribute("type", "text");
   var email = document.createElement("input");
   email.setAttribute("type","email");
   var save = document.createElement("input");
@@ -21,37 +21,40 @@ function addOrEditRow(bool,id)
   if(bool == false) {
     // row insertion  
     row.insertCell(0);
-    var column1id = "col1"+ rowid;
-    name.setAttribute("id", column1id);
+    column1id = "name_" + rowid;
+    name.setAttribute("id", "name" + rowid);
+    row.cells[0].setAttribute("id", column1id);
     row.cells[0].appendChild(name);
     row.insertCell(1);
-    var column2id = "col2" + rowid;
-    email.setAttribute("id", column2id);
+    column2id = "email_"+ rowid;
+    email.setAttribute("id", "email" + rowid);
     row.cells[1].appendChild(email);
+    row.cells[1].setAttribute("id", column2id);
     row.insertCell(2);
-    var column3id = "col3" + rowid;  
-    save.setAttribute("id", column3id);
+    column3id = "action_"+ rowid;  
+    save.setAttribute("id", "action" + rowid);
     row.cells[2].appendChild(save);
+    row.cells[2].setAttribute("id", column3id);    
     save.setAttribute("onclick", "saveRow(\""+rowid+"\")");
 }
   else
   {
     var rows = document.getElementById(id);
-    oname = rows.cells[0].textContent;
-    oemail = rows.cells[1].textContent;
-    savedName = document.getElementById("col1" + id);
-    savedEmail = document.getElementById("col2" + id);
-    savedLink = document.getElementById("col3" + id);
-    name.setAttribute("id", "col1"+ id);
-    email.setAttribute("id", "col2"+ id);
-    save.setAttribute("id", "col3" + id);
+    oname = document.getElementById("name_"+ id).textContent;
+    oemail = document.getElementById("email_"+ id).textContent;
+    savedName = document.getElementById("name" + id);
+    savedEmail = document.getElementById("email"+ id);
+    savedLink = document.getElementById("action"+ id);
+    name.setAttribute("id", "name"+ id);
+    email.setAttribute("id", "email"+ id);
+    save.setAttribute("id", "action" + id);
     save.setAttribute("onclick", "saveRow(\""+id+"\")");
     name.setAttribute("value", oname);
     email.setAttribute("value", oemail);
     // replace the textnodes with the previously occupying textboxes
-    rows.cells[0].replaceChild(name, savedName);
-    rows.cells[1].replaceChild(email, savedEmail);
-    rows.cells[2].replaceChild(save, savedLink);
+    document.getElementById("name_"+id).replaceChild(name, savedName);
+    document.getElementById("email_"+id).replaceChild(email, savedEmail);
+    document.getElementById("action_"+id).replaceChild(save, savedLink);
   } 
 }
 
@@ -59,31 +62,30 @@ function addOrEditRow(bool,id)
 function saveRow(id)
 {
   rows = document.getElementById(id);
-  oldName = document.getElementById("col1"+ id);
+  oldName = document.getElementById("name"+ id);
   newName =  document.createElement("div");
   newName.appendChild(document.createTextNode(oldName.value));
-  rows.cells[0].replaceChild(newName,oldName);
-  oldEmail = document.getElementById("col2"+ id);
+  document.getElementById("name_"+id).replaceChild(newName, oldName);
+  oldEmail = document.getElementById("email"+ id);
   newEmail = document.createElement("div");
-  newName.setAttribute("id","col1"+ id);
+  newName.setAttribute("id", "name"+ id);
   newEmail.appendChild(document.createTextNode(oldEmail.value));
-  rows.cells[1].replaceChild(newEmail,oldEmail);
-  newEmail.setAttribute("id","col2"+ id);
-  oldLink = document.getElementById("col3"+ id);
+  document.getElementById("email_"+id).replaceChild(newEmail, oldEmail);
+  newEmail.setAttribute("id","email"+ id);
+  oldLink = document.getElementById("action"+ id);
   link = document.createElement("div");
   editLink = document.createElement("a");
   editLink.appendChild(document.createTextNode("edit/"));
   editLink.href = "javascript:void(0)";
   link.appendChild(editLink);
-  editLink.setAttribute("onClick","addOrEditRow(true,'" + id + "')");
+  editLink.setAttribute("onClick", "addOrEditRow(true,'" + id + "')");
   delLink = document.createElement("a");
   delLink.appendChild(document.createTextNode("delete"));
   delLink.href = "javascript:void(0)";
   link.appendChild(delLink);
-  delLink.setAttribute("onClick","deleteRow('" + id + "')");
-  link.setAttribute("id","col3"+ id);
-  rows.cells[2].replaceChild(link,oldLink);
-
+  delLink.setAttribute("onClick", "deleteRow('" + id + "')");
+  link.setAttribute("id", "action"+ id);
+  document.getElementById("action_"+id).replaceChild(link, oldLink);
 }
 //a function to delete a row based on an existing id
 function deleteRow(id)
