@@ -1,27 +1,24 @@
-function usernamevalidation()
+function usernamevalidation(value)
 {
   // a boolean variable to check if the user has entered the valid name else prompts the window again and again
   var bool = true;                
-  // loop that runs till the user enters a valid firstname
+  // loop that runs till the user enters a valid name
   while (bool == true) {
-    var firstname = prompt("enter your first name");
-    bool = !bool;
-    // checks if there are a few white spaces or firstname is  blank
-    if (firstname == "" || (firstname.replace(/\s+/g, '').length==0)) {
-      alert("please enter a valid first name");
-      bool = !bool;
-    }
-  }
-  //when the firstname is entered correctly
-  while (bool == false) {
-    bool = !bool;
-    var lastname = prompt("enter your last name");
+    var name = prompt("enter your " + value + " name");
     
-    if(lastname == "" || (lastname.replace(/\s+/g, '').length==0)) {
-      alert("please enter a valid last name");
+    bool = !bool;
+    // checks if there are a few white spaces or name is blank
+    if (name == "" || (name.trim(' ').length==0)) {
+      alert("please enter a valid " + value + "name" );
       bool = !bool;
     }
   }
+  return name;
+}
+
+function promptname() {
+  firstname = usernamevalidation("first");
+  lastname = usernamevalidation("last");
   message = "hello " + firstname + " " + lastname;
   alert(message);
   //create a div element and append it to the body
