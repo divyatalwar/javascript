@@ -2,16 +2,29 @@ var form = {
   register : document.getElementById("registrationform"),
   text_area : document.getElementById("text_area"),
   checkbox : document.getElementById("check"),
+  email : document.getElementById("email"), 
+  homepage : document.getElementById("homepage"),
+};
+var patterns = {
+  regexemail : /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/, 
+  regexurl : /((http|ftp|https):\/\/)?(w{3}\.)?([a-zA-Z]+\.)+([a-zA-Z0-9]{2,4})+[/]?([\w\-\.,@?^=%&amp;:~\+#])+$/,
 };
 
-function validate(form)
+// function to check email and url validation
+function patternMatch(pattern , elementToValidate )
+{
+  if (!pattern.test(elementToValidate.value) & flag == false) {
+    alert(elementToValidate.id + " is invalid. pls check");
+    flag = true; 
+  }
+}
+
+function FormValidation(form)
 {
   this.form = form;
-  this.formvalidation = function(e) { 
-    var regexemail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/; 
-    var regexurl = /((http|ftp|https):\/\/)?(w{3}\.)?([a-zA-Z]+\.)+([a-zA-Z0-9]{2,4})+[/]?([\w\-\.,@?^=%&amp;:~\+#])+$/;
+  this.validate = function(e) {    
     // a flag variable to check the validity of the fields
-    var flag = false;
+    flag = false;
     var element = document.getElementsByClassName("inputvalue");
     for (var i=0;i < element.length; i++) {
       var text = element[i].value.trim(' ');        //to remove any leading or trailing white spaces
@@ -26,20 +39,10 @@ function validate(form)
       alert(" ABOUT ME information is not complete: it should be minimum 50 characters");
       flag = true;
     }  
-    //validating if the user has entered the correct mail or not
-    var email = document.getElementById("email"); 
-    if(!regexemail.test(email.value) & flag == false) {
-      alert("please enter a valid email");
-      flag = true; 
-    } 
-    //validating if the user has entered the corrext url or not
-    var homepage = document.getElementById("homepage"); 
-    if(!regexurl.test(homepage.value) & flag == false) {
-      alert("please enter a valid url");
-      flag = true; 
-    }
+    patternMatch(patterns.regexemail, form.email);                                             //function calling for validating mail
+    patternMatch(patterns.regexurl, form.homepage);                                            //function calling for validating url
     //confirm checkbox notification
-    if (check.checked) {
+    if (form.checkbox.checked) {
       textstring = "want";      
     } 
     else {
@@ -58,6 +61,6 @@ function validate(form)
       e.preventDefault();
     }  
   }
-  this.form.register.addEventListener("submit" ,this.formvalidation, false);
+  this.form.register.addEventListener("submit" ,this.validate, false);
 }
-var regexvalidation = new validate(form);
+var regexvalidation = new FormValidation(form);
