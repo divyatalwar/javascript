@@ -1,13 +1,11 @@
 // object oriented approach
-var patterns = {
-  regexNumber : /^(([\-]{1})?[\d]+(\.[\d]+)?)$/ 
-};
+
 function NumberValidation(value) {
   // obtaining the id of the form
   this.form = document.getElementById(value);
   this.checkNumber = function (e) {
-    
-    if(patterns.regexNumber.test(document.getElementById("number").value)) {
+    var regexNumber = /^(([\-\+]{1})?[\d]*(\.[\d]+)?)$/;
+    if(regexNumber.test(document.getElementById("number").value)) {
       document.getElementById("result").value = 'true';
       alert("input is a valid number");
     }
