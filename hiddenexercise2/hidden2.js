@@ -90,6 +90,8 @@ function addtocart(productcontent , productprice , quantity) {
 //functiom that removes the elements from ur cart and recalculates the total
 function removerow(id) {
   document.getElementById("tableid").lastChild.removeChild(document.getElementById(id));
+  j-=1;
+  document.getElementById("mycart").innerHTML="mycart(" + j +")";
   calculatetotal();
 }
 //function that displays ur cart
