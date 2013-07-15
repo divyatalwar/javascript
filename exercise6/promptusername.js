@@ -1,19 +1,12 @@
 function usernamevalidation(value)
 {
-  // a boolean variable to check if the user has entered the valid name else prompts the window again and again
-  var bool = true;                
-  // loop that runs till the user enters a valid name
-  while (bool == true) {
+  do {
     var name = prompt("enter your " + value + " name");
-    
-    bool = !bool;
-    // checks if there are a few white spaces or name is blank
     if (name == "" || (name.trim(' ').length==0)) {
       alert("please enter a valid " + value + "name" );
-      bool = !bool;
     }
-  }
-  return name;
+  }while(name == false);
+  return name;                                  // name if empty string whem converted to boolean for comparison yields false otherwise true
 }
 
 function promptname() {
