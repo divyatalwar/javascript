@@ -10,6 +10,7 @@ function mycart() {
 }
 //function that displays the specific items according to the three main menu items in the dropdown list i.e clothing grocery electronics
 function display(val) {
+  
   document.getElementById("lowercontent").style.visibility="visible";
   var items=document.getElementsByClassName("content");
   var prices=document.getElementsByClassName("price");
@@ -38,7 +39,8 @@ function add(value) {
       else {
         alert("It has been successfully added to ur cart");
         addtocart(productcontent , productprice , quantity );
-        quantity.value="";
+        quantity.value="";        
+        calculatetotal();
         break;       
       }
     }
@@ -105,7 +107,7 @@ function displaycart() {
 }
 //function that calculates ur total  
 function calculatetotal() {
-  var total=0;
+  total=0;
   for (i=1;i<=rowNum;i++) {
     a=document.getElementById("arr"+i+count);
     if(a!=null) {
