@@ -1,4 +1,4 @@
-function usernamevalidation(value)
+function userNameValidation(value)
 {
   do {
     var name = prompt("enter your " + value + " name");
@@ -9,10 +9,10 @@ function usernamevalidation(value)
   return name;                                  // name if empty string whem converted to boolean for comparison yields false otherwise true
 }
 
-function promptname() {
-  firstname = usernamevalidation("first");
-  lastname = usernamevalidation("last");
-  message = "hello " + firstname + " " + lastname;
+function promptName() {
+  firstName = userNameValidation("first");
+  lastName = userNameValidation("last");
+  message = "hello " + firstName + " " + lastName;
   alert(message);
   //create a div element and append it to the body
   content = document.createElement("div");
