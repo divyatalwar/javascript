@@ -1,11 +1,11 @@
 function userNameValidation(value)
 {
   var name = prompt("Enter your " + value + " name");
-  if (name == "" || (name.trim(' ').length == 0)) {
+  if (!name.trim(' ')) {
     alert("Please enter a valid " + value + "name" );
     return userNameValidation(value);
   }
-  return name;                            // name if empty string whem converted to boolean for comparison yields false otherwise true
+  return name;                        
 }
 function promptName() {
   firstName = userNameValidation("First");
