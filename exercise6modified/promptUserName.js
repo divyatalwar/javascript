@@ -7,6 +7,7 @@ function userNameValidation(value)
   }
   return name;                        
 }
+
 function promptName() {
   var firstName = userNameValidation("First");
   var lastName = userNameValidation("Last");
