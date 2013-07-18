@@ -2,7 +2,7 @@ function userNameValidation(value)
 {
   var name = prompt("Enter your " + value + " name").trim();
   if (!name) {
-    alert("Please enter a valid " + value + " name" );
+    alert("Please enter a valid " + value + "name" );
     return userNameValidation(value);
   }
   return name;                        
