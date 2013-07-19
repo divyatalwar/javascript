@@ -13,7 +13,7 @@
   font-style:italic;
   background-color:green;
 }
-#startnow {
+#submit {
   position:absolute;
   left:200px;
   top:130px;
