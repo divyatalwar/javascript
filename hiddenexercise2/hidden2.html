@@ -5,10 +5,10 @@
   <body>
     <div id="container">
       <div id="upper">
-        <div id="products" onclick="mycart()">
+        <div id="products" >
           <a >products </a>
         </div>
-        <div id= "mycart" onclick="displaycart()">
+        <div id= "mycart">
           <a> mycart</a>
         </div>
       </div>
@@ -33,10 +33,10 @@
           <input type="submit" value="clear" onclick="cleartext()">
           <label for="category"> category </label>
           <select id = "types">
-            <option> </option>
-            <option id="clothing"  onclick="display(this)" > clothing </option>
-            <option id="electronics"  onclick="display(this)"> electronics </option>
-            <option id="clothing"  onclick="display(this)"> grocery </option>
+            <option selected> </option>
+            <option id="clothing"   > clothing </option>
+            <option id="electronics" > electronics </option>
+            <option id="grocery" > grocery </option>
           </select>
         </div>
       </div>
@@ -49,7 +49,7 @@
             <label for="quantity"> quantity</label>
             <input type="text" id="quantityforproduct1">
           </div>
-          <input type="submit" id="add_to_cart" value="add to cart" onclick="add('product1')">
+          <input type="submit" id="product1" value="add to cart" >
         </div>
         <div class="product2">
           <div class="content"></div>
@@ -57,7 +57,7 @@
           <div class="quantity">
             <label for="quantity"> quantity</label>
             <input type="text" id="quantityforproduct2""></div>
-          <input type="submit" id="add_to_cart1" value="add to cart" onclick="add('product2')">
+          <input type="submit" id="product2" value="add to cart">
         </div>
         <div class="product3">
           <div class="content"></div>
@@ -65,7 +65,7 @@
           <div class="quantity">
             <label for="quantity"> quantity</label>
             <input type="text" id="quantityforproduct3"></div>
-          <input type="submit" id="add_to_cart2" value="add to cart" onclick="add('product3')">
+          <input type="submit" id="product3" value="add to cart">
         </div>
       </div>
       <div id="price">
@@ -73,7 +73,7 @@
       <input type="submit" value="checkout"id="checkout">
       </div>
     </div>
-    <script type="text/javascript" src="hidden2.js">
+    <script type="text/javascript" src="sample.js">
     </script>
   </body>
 </html>

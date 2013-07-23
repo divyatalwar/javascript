@@ -77,7 +77,7 @@ float:left;
 position:absolute;
 top:320px;
 }
-#add_to_cart
+#product1
 {
 float:left;
 position:absolute;
@@ -133,7 +133,7 @@ top:-20px;
 left:80px;
 width:30px;
 }
-#add_to_cart1
+#product2
 {
 float:left;
 position:absolute;
@@ -142,7 +142,7 @@ left:600px;
 
 
 }
-#add_to_cart2
+#product3
 {
 float:left;
 position:absolute;
