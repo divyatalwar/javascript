@@ -1,0 +1,21 @@
+#container{
+  width: 510px;
+  height: 410px;
+  border: solid 1px black;
+  margin-left: 200px;
+}
+img {
+width:100px;
+height:100px;
+}
+#container > div{
+  border: solid 1px black;
+  float: left;
+}
+
+#dropDown{
+  width: 200px;
+  margin-top: 90px;
+  margin-left: 150px;
+  background-color: blue;
+}
