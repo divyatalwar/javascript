@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="hidden2.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="upper">
+        <div id="products" onclick="mycart()">
+          <a >products </a>
+        </div>
+        <div id= "mycart" onclick="displaycart()">
+          <a> mycart</a>
+        </div>
+      </div>
+      <div id="mycart1">
+        <table id ="tableid" border ="1" width="800px">
+          <tr>
+            <td>products </td>
+            <td> price </td>
+            <td>quantity </td>
+            <td>subtotal </td>
+            <td>         </td>
+          </tr>
+        </table>
+      </div>
+      <div id= "lowerportion">
+        <div id="search1">
+          <label for="search"> search </label>
+          <input type ="text" id="search">
+        </div>
+        <div id="a">
+          <input type="submit" value="search">
+          <input type="submit" value="clear" onclick="cleartext()">
+          <label for="category"> category </label>
+          <select id = "types">
+            <option selected> </option>
+            <option id="clothing"   > clothing </option>
+            <option id="electronics" > electronics </option>
+            <option id="grocery" > grocery </option>
+          </select>
+        </div>
+      </div>
+      <div id="lowercontent">
+        <div class="product1">
+          <div class="content">
+          </div>
+          <div class="price"></div>
+          <div class="quantity">
+            <label for="quantity"> quantity</label>
+            <input type="text" id="quantityforproduct1">
+          </div>
+          <input type="submit" id="product1" value="add to cart" >
+        </div>
+        <div class="product2">
+          <div class="content"></div>
+          <div class="price"></div>
+          <div class="quantity">
+            <label for="quantity"> quantity</label>
+            <input type="text" id="quantityforproduct2""></div>
+          <input type="submit" id="product2" value="add to cart">
+        </div>
+        <div class="product3">
+          <div class="content"></div>
+          <div class="price"></div>
+          <div class="quantity">
+            <label for="quantity"> quantity</label>
+            <input type="text" id="quantityforproduct3"></div>
+          <input type="submit" id="product3" value="add to cart">
+        </div>
+      </div>
+      <div id="price">
+      total : <input type="text" id="totalprice" >
+      <input type="submit" value="checkout"id="checkout">
+      </div>
+    </div>
+    <script type="text/javascript" src="sample.js">
+    </script>
+  </body>
+</html>

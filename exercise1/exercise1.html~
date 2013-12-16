@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>this is my first javscript exercise
+    </title>
+    <script type="text/javascript" src="check.js">
+    </script>  
+  </head>
+  <body>
+    <p>
+      <input type="checkbox" name="colors" id="red" value="red" ><label for="red">red</label>
+    </p>
+    <p>
+      <input type="checkbox" name="colors" id="green" value="green" ><label for="green">green</label>
+    </p>
+    <p>
+      <input type="checkbox" name="colors" id="yellow" value="yellow" ><label for="yellow">yellow</label>
+    </p>
+    <p>
+      <input type="checkbox" name="colors" id="white" value="white" ><label for="white">white</label>
+    </p>
+    <p>
+      <input type="checkbox" name="colors" id="black" value="black" ><label for="black">black</label>
+    </p>
+    <div id="link">
+<<<<<<< HEAD
+      <a id="checkall" href="#" onclick="return checkAllOrNone(true);">check all</a>
+      <a id="uncheckall" href="#" onclick="return checkAllOrNone(false);">uncheck all</a>
+=======
+      <a id="checkall" href="#;" onclick="checkAllOrNone(true);">check all</a>
+      <a id="uncheckall" href="#" onclick="checkAllOrNone(false);">uncheck all</a>
+>>>>>>> 8164e0237d603027d1135d54048322652a1103ae
+    </div>
+  </body>
+</html>

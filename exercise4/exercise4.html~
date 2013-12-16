@@ -1,0 +1,82 @@
+
+<html>
+  <head>
+    <title> this is my fourth javascript exercise </title>
+    <script type="text/javascript" src="exercise4.js"></script>
+    <link rel="stylesheet" type="text/css" href="exercise4.css">
+  </head>
+  <body>
+    <div id="container">
+      <ul>
+        <li>
+          <input type="checkbox" id="color"  name="color" onclick="displaychild(this);"><label for="color">Colors</label>
+            <ul id="colorgroup">
+              <li>
+                <input type="checkbox" id="red" name="colorgroup" >
+                <label for="red">Red</label>
+              </li>
+              <li>
+                <input type="checkbox" id="yellow" name="colorgroup">
+                <label for="yellow">Yellow</label>
+              </li>
+              <li>
+                <input type="checkbox" id="green" name="colorgroup">
+                <label for="green">Green</label>
+              </li>
+              <li>
+                <input type="checkbox" id="blue" name="colorgroup">
+                <label for="blue">Blue</label>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="muvi" onclick="displaychild(this);"><label for="muvi">movies</label>
+            <ul id="muvigroup">
+              <li>
+                <input type="checkbox" id="Dar" name="muvigroup" >
+                <label for="Dar">dar</label>
+              </li>
+              <li>
+                <input type="checkbox" id="sir" name="muvigroup">
+                <label for="sir">sir</label>
+              </li>
+              </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="drinks" onclick="displaychild(this);"><label for="drinks">drinks</label>
+            <ul id="drinksgroup">
+              <li>
+                <input type="checkbox" id="coke" name="drinksgroup">
+                <label for="red">coke</label>
+              </li>
+              <li>
+                <input type="checkbox" id="pepsi" name="drinksgroup">
+                <label for="pepsi">pepsi</label>
+              </li>
+              <li>
+                <input type="checkbox" id="dew" name="drinksgroup">
+                <label for="dew">dew</label>
+              </li>
+             </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="bikes" onclick="displaychild(this);"><label for="bikes">bikes</label>
+            <ul id="bikesgroup">
+              <li>
+                <input type="checkbox" id="V-rod" name="bikesgroup">
+                <label for="V-rod">V-rod</label>
+              </li>
+              <li>
+                <input type="checkbox" id="pulsar" name="bikesgroup">
+                <label for="pulsar">pulsar</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cbz" name="bikesgroup">
+                <label for="cbz">cbz</label>
+              </li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

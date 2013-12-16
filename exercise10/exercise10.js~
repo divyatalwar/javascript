@@ -5,7 +5,7 @@ function NumberValidation(value) {
   this.form = document.getElementById(value);
 console.log(this.form)
   this.checkNumber = function (e) {
-    var regexNumber = /^(([\-\+])?[\d]*(\.[\d]+)?)$/;
+    var regexNumber = /^(([\-\+]{1})?[\d]*(\.[\d]+)?)$/;
     if(regexNumber.test(document.getElementById("number").value)) {
       document.getElementById("result").value = 'true';
       alert("input is a valid number");
